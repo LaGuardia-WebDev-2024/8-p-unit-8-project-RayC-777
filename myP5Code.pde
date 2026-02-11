@@ -6,26 +6,19 @@ setup = function() {
     drawFish(200, 200, color(200,0,200)); 
     drawFish(300, 200, color(0,200,200));
 
-    drawStar(400, 320, color(200,10,195));
-    drawStar(100, 315, color(100,10,195));
+    drawStar(400, 320, color(200,10,195)); //right star
+    drawStar(100, 315, color(100,10,195)); //left star
 
     drawBubble (100, 130)
     
 };
 
- var drawBubble = function(bubbleX, bubbleY){
+ var drawBubble = function(bubbleX, bubbleY, bubbleSize){
 
-bubbleY = bubbleY - 1;
-
-//If bubble goes off screen, reset its position
-if (bubbleY <0) {
-bubbleY = height;
-bubbleX = random(width); // optional: reset to a random x position
-}
 //draw bubble
 stroke(100, 150, 255, 80)
-fill(100, 150, 255, 100);
-ellipse(bubbleX, bubbleY, 50, 50);
+fill(100, 150, 255, 110);
+ellipse(bubbleX, bubbleY, bubbleSize, bubbleSize);
 
  };
 
@@ -37,7 +30,7 @@ draw = function(){
 
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
- drawBubble (mouseX, mouseY)
+ drawBubble (mouseX, mouseY, random(6,45))
 
 }
 
@@ -53,6 +46,14 @@ var drawStar = function (starX, starY, starColor){
 textSize(60);
 fill(starColor);
 text("𓇼", starX, starY);
+};
+
+//drawPuffer Function - will run when called 
+var drawPuffer = fuction (pufferX, pufferY, pufferColor){
+textSize(70);
+fill(pufferColor);
+text("🐡", pufferX, pufferY);
+
 };
 
 
