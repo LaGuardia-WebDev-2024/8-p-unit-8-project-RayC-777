@@ -9,8 +9,9 @@ setup = function() {
     drawStar(400, 320, color(200,10,195)); //right star
     drawStar(100, 315, color(100,10,195)); //left star
 
-    drawBubble (100, 130)
-    
+    drawBubble (100, 130);
+
+
 };
 
  var drawBubble = function(bubbleX, bubbleY, bubbleSize){
@@ -48,13 +49,6 @@ fill(starColor);
 text("𓇼", starX, starY);
 };
 
-//drawPuffer Function - will run when called 
-var drawPuffer = fuction (pufferX, pufferY, pufferColor){
-textSize(70);
-fill(pufferColor);
-text("🐡", pufferX, pufferY);
-
-};
 
 
 
